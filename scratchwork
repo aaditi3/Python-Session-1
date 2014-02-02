@@ -1,0 +1,323 @@
+Python 2.7.6 (default, Nov 10 2013, 19:24:18) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 2 + 4
+6
+>>> print "Hello"
+Hello
+>>> print "This is a string."
+This is a string.
+>>> print"This is a string."
+This is a string.
+>>> print'This is a string."
+SyntaxError: EOL while scanning string literal
+>>> print'This is a string.'
+This is a string.
+>>> print "This is "a string"".
+SyntaxError: invalid syntax
+>>> print "This will give you an error.'
+SyntaxError: EOL while scanning string literal
+>>> print "This will give you an error.'
+SyntaxError: EOL while scanning string literal
+>>> print "My governor's name is Martin O'Malley"
+My governor's name is Martin O'Malley
+>>> print 'My governor's name is Martin o'Malley'
+SyntaxError: invalid syntax
+>>> print "She said, "Testing, 1-2-3""
+SyntaxError: invalid syntax
+>>> print """She said, "Testing, 1-2-3""""
+SyntaxError: EOL while scanning string literal
+>>> print """She said, "Testing, 1-2-3.""""
+SyntaxError: EOL while scanning string literal
+>>> print """She said, "Testing, 1-2-3."."""
+She said, "Testing, 1-2-3.".
+>>> print "a \n b \t c \\ d \" \' "
+a 
+ b 	 c \ d " ' 
+>>> print """She said, \"Testing, 1-2-3.\" """
+She said, "Testing, 1-2-3." 
+>>> print """She said, "Testing, 1-2-3.\" """
+She said, "Testing, 1-2-3." 
+>>> output = "Event Name"
+>>> print output
+Event Name
+>>> output = "Event Name \t \t \t Date\\Time\n"
+>>> print output
+Event Name 	 	 	 Date\Time
+
+>>> output= "Event Name \t \t \t Date\\Time \n blah"
+>>> print output
+Event Name 	 	 	 Date\Time 
+ blah
+>>> output= "Event Name \t \t \t Date\\Time \nblah"
+>>> print output
+Event Name 	 	 	 Date\Time 
+blah
+>>> output= """Event Name \t \t \t Date\\Time \nHappy Hour \t \t \t 7/21, 6:00 pm\nJane's House Party \t \t \t 7/22, 8:00 pm"""
+>>> print output
+Event Name 	 	 	 Date\Time 
+Happy Hour 	 	 	 7/21, 6:00 pm
+Jane's House Party 	 	 	 7/22, 8:00 pm
+>>> output= "Event Name \t \t \t Date\\Time \nHappy Hour \t \t \t 7/21, 6:00 pm\nJane's House Party \t \t 7/22, 8:00pm"
+>>> print output
+Event Name 	 	 	 Date\Time 
+Happy Hour 	 	 	 7/21, 6:00 pm
+Jane's House Party 	 	 7/22, 8:00pm
+>>> output= "Event Name \t \t \tDate\\Time \n Happy Hour \t \t \t7/21, 6:00 pm\n  Jane's House Party \t\t 7/22, 8:00pm"
+>>> print output
+Event Name 	 	 	Date\Time 
+ Happy Hour 	 	 	7/21, 6:00 pm
+  Jane's House Party 		 7/22, 8:00pm
+>>> output= "Event Name \t \t \tDate\\Time \n Happy Hour \t \t \t7/21, 6:00 pm\n  Jane's House Party \t 7/22, 8:00pm"
+>>> print output
+Event Name 	 	 	Date\Time 
+ Happy Hour 	 	 	7/21, 6:00 pm
+  Jane's House Party 	 7/22, 8:00pm
+>>> output= "Event Name \t \t \tDate\\Time \nHappy Hour \t \t \t7/21, 6:00 pm\nJane's House Party \t\t 7/22, 8:00pm"
+>>> print output
+Event Name 	 	 	Date\Time 
+Happy Hour 	 	 	7/21, 6:00 pm
+Jane's House Party 		 7/22, 8:00pm
+>>> output= "Event Name \t \t \tDate\\Time \nHappy Hour \t \t \t7/21, 6:00 pm\nJane's House Party \t\t7/22, 8:00pm"
+>>> print output
+Event Name 	 	 	Date\Time 
+Happy Hour 	 	 	7/21, 6:00 pm
+Jane's House Party 		7/22, 8:00pm
+>>> first_name = "Aaditi"
+>>> print first_name[0]
+A
+>>> last_name = "Dubale"
+>>> print first_name[0] last_name [0]
+SyntaxError: invalid syntax
+>>> print "first_name[0] last_name[0]
+SyntaxError: EOL while scanning string literal
+>>> print "first_name[0] last_name[0]"
+first_name[0] last_name[0]
+>>> print first_name[1:5]
+adit
+>>> print first_name[1:6]
+aditi
+>>> print first_name[0:6]
+Aaditi
+>>> print first_name
+Aaditi
+>>> print first_name[2:4]
+di
+>>> print frist_name
+
+Traceback (most recent call last):
+  File "<pyshell#49>", line 1, in <module>
+    print frist_name
+NameError: name 'frist_name' is not defined
+>>> print First_name
+
+Traceback (most recent call last):
+  File "<pyshell#50>", line 1, in <module>
+    print First_name
+NameError: name 'First_name' is not defined
+>>> print first_name[:5]
+Aadit
+>>> print first_name[0:5]
+Aadit
+>>> print first_name[:]
+Aaditi
+>>> print first_name[:2]
+Aa
+>>> print first_name[2:]
+diti
+>>> print first_name[-3:]
+iti
+>>> phone = "(123) 456-7890"
+>>> print phone
+(123) 456-7890
+>>> print phone[6:9]
+456
+>>> name = "Aaditi"
+>>> age = 27
+>>> print age + 100
+127
+>>> age = "27"
+>>> print age +100
+
+Traceback (most recent call last):
+  File "<pyshell#64>", line 1, in <module>
+    print age +100
+TypeError: cannot concatenate 'str' and 'int' objects
+>>> age = 27
+>>> print age + 100
+127
+>>> print "My name is: {0}".format(name)
+My name is: Aaditi
+>>> print "My name is: {1}".format(name)
+
+Traceback (most recent call last):
+  File "<pyshell#68>", line 1, in <module>
+    print "My name is: {1}".format(name)
+IndexError: tuple index out of range
+>>> print "My name is: {0}".format(name)
+My name is: Aaditi
+>>> print "My name is: {0} and my age is {1}".format(name, age)
+My name is: Aaditi and my age is 27
+>>> print "My age is: {0}".format(age)
+My age is: 27
+>>> print "My name is: {1} and my age is {0}".format(name, age)
+My name is: 27 and my age is Aaditi
+>>> print "My name is: {0} and my age is {1}".format(age, name)
+My name is: 27 and my age is Aaditi
+>>> phone = "2025551234"
+>>> 
+
+>>> 
+
+
+>>> 
+
+>>> 
+>>> 
+
+
+>>> 
+
+>>> 
+
+
+>>> 
+>>> 
+
+>>> 
+>>> 
+>>> 
+>>> 
+>>> print "Local: {0}".format(phone[3:])
+Local: 5551234
+>>> print "Local: {0}-{1}".format(phone[3:6], phone[7:])
+Local: 555-234
+>>> print "Local: {0}-{1}".format(phone[3:6], phone[6:])
+Local: 555-1234
+>>> print name age
+SyntaxError: invalid syntax
+>>> print name, age
+Aaditi 27
+>>> print name "," age
+SyntaxError: invalid syntax
+>>> print name, \, age
+SyntaxError: unexpected character after line continuation character
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> print "Domestic: {0}".format(phone)
+Domestic: 2025551234
+>>> print "Domestic: ({0}).format(phone[0:3])
+SyntaxError: EOL while scanning string literal
+>>> print "Domestic: ({0})".format(phone[0:3])
+Domestic: (202)
+>>> print "Domestic: ({0}) {1}".format(phone[0:3], phone[3:6])
+Domestic: (202) 555
+>>> print "Domestic: ({0}) {1}-{2}".format(phone[0:3], phone[3:6], phone[7:])
+Domestic: (202) 555-234
+>>> print "Domestic: ({0}) {1}-{2}".format(phone[0:3], phone[3:6], phone[6:])
+Domestic: (202) 555-1234
+>>> print "International: +'1'-{0}-{1}-{2}".format(phone[0:3], phone[3:6], phone[6:])
+International: +'1'-202-555-1234
+>>> print "International: +1-{0}-{1}-{2}".format(phone[0:3], phone[3:6], phone[6:])
+International: +1-202-555-1234
+>>> domestic "Domestic: ({0}) {1}-{2}".format(phone[0:3], phone[3:6], phone[6:])
+SyntaxError: invalid syntax
+>>> 
+>>> 
+>>> 
+>>> print "Domestic: ({0}) {1}-{2}".format(phone[:3], phone[3:6], phone[6:])
+Domestic: (202) 555-1234
+>>> print "International: +1-{0}-{1}-{2}".format(phone[:3], phone[3:6], phone[6:])
+International: +1-202-555-1234
+>>> 
+>>> 
+>>> email_address = "aaditi.dubale@gmail.com"
+>>> email_address.find("@")
+13
+>>> email_address.find("a")
+0
+>>> email_address.count("a")
+4
+>>> 
+>>> phone = "555-1234"
+>>> print phone.replace("1234", "9999")
+555-9999
+>>> print phone
+555-1234
+>>> phone = phone.replace("1234", "9999")
+>>> print phone
+555-9999
+>>> 
+>>> len name
+SyntaxError: invalid syntax
+>>> len(name)
+6
+>>> len(phone)
+8
+>>> 
+>>> print len(first_name)
+6
+>>> length_of_name = len(first_name)
+>>> print length_of_name
+6
+>>> 
+>>> print first_name
+Aaditi
+>>> first_name = "AADITI!!!"
+>>> print first_name.lower()
+aaditi!!!
+>>> print first_name.strip()
+AADITI!!!
+>>> print first_name.upper()
+AADITI!!!
+>>> print first_name.count()
+
+Traceback (most recent call last):
+  File "<pyshell#144>", line 1, in <module>
+    print first_name.count()
+TypeError: count() takes at least 1 argument (0 given)
+>>> print first_name.count(i)
+
+Traceback (most recent call last):
+  File "<pyshell#145>", line 1, in <module>
+    print first_name.count(i)
+NameError: name 'i' is not defined
+>>> print first_name.count("i")
+0
+>>> print first_name.count("I")
+2
+>>> 
+>>> 
+>>> if age >="21:
+SyntaxError: EOL while scanning string literal
+>>> 
+>>> 
+>>> age = 28
+if age >=21:
+	print "three philosophers, please"
+else:
+	print "cherry coke, please"
+	
+>>> session1.py
+
+Traceback (most recent call last):
+  File "<pyshell#154>", line 1, in <module>
+    session1.py
+NameError: name 'session1' is not defined
+>>> run session1.py
+SyntaxError: invalid syntax
+>>> session1
+
+Traceback (most recent call last):
+  File "<pyshell#156>", line 1, in <module>
+    session1
+NameError: name 'session1' is not defined
+>>> python session1.py
+SyntaxError: invalid syntax
+>>> 
